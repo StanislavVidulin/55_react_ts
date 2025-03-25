@@ -6,7 +6,7 @@ import { getAction, TRAFFIC_LIGHT } from "./object_types";
 function Lesson06() {
     console.log(getAction(TRAFFIC_LIGHT.GREEN));
     
-  return <div><Button /></div>;
+  return <Button />;
 }
 
 // Экспорт по умолчанию для компонента Lesson06
