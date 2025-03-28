@@ -8,7 +8,7 @@ function Homework08() {
   const [password, setPassword] = useState<string>("");
   const [showPassword, setShowPassword] = useState<boolean>(false);
 
-  const changePassword = (event: ChangeEvent<HTMLInputElement>) => {
+  const onChangePassword = (event: ChangeEvent<HTMLInputElement>) => {
     setPassword(event.target.value);
   };
 
@@ -27,14 +27,15 @@ function Homework08() {
       <Input
         name="user_password"
         label="Password: "
+        id="password_id"
         placeholder="Enter your password"
         type="password"
         value={password}
-        onChange={changePassword}
+        onChange={onChangePassword}
       />
       </div>
       <Button name="SHOW PASSWORD" onClick={showUserPassword} />
-      {showPassword && <div>{password}</div>}
+      {showPassword && <div className="result-container">{password}</div>}
       <Button name="HIDE PASSWORD" onClick={hideUserPassword} />
     </div>
   );
