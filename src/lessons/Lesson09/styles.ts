@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 
 // Интерфейс для пропсов стилизованного компонента BoxInfo
-interface BoxInfoStyledProps {
+export interface BoxInfoStyledProps {
     primary?: boolean
 }
 
