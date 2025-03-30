@@ -1,4 +1,4 @@
-import { BoxInfo, DivContainer, UserImg, TitleImgPContainer } from "./styles";
+import { BoxInfo, DivContainer, UserImg, TitleImgPContainer, TitleCard, TextCard } from "./styles";
 import User from "../../assets/avatar.jpg";
 import VipUser from "../../assets/vip.png";
 
@@ -7,22 +7,22 @@ function Homework09() {
     <DivContainer>
       <BoxInfo primary>
         <TitleImgPContainer>
-          <h2>VIP Пользователь</h2>
+          <TitleCard>VIP Пользователь</TitleCard>
           <UserImg src={VipUser} />
-          <p>
+          <TextCard>
             Доступ к эксклюзивным функциям, персональный менеджер и приоритетная
             поддержка.
-          </p>
+          </TextCard>
         </TitleImgPContainer>
       </BoxInfo>
 
       <BoxInfo>
         <TitleImgPContainer>
-          <h2>Обычный Пользователь</h2>
+          <TitleCard>Обычный Пользователь</TitleCard>
           <UserImg src={User} />
-          <p>
+          <TextCard>
             Стандартный доступ, базовые функции и поддержка в порядке очереди.
-          </p>
+          </TextCard>
         </TitleImgPContainer>
       </BoxInfo>
     </DivContainer>

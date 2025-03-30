@@ -6,7 +6,6 @@ export const BoxInfo = styled.div<BoxInfoStyledProps>`
   width: ${({ primary }) => (primary ? "550px" : "500px")};
   height: ${({ primary }) => (primary ? "350px" : "300px")};
   background-color: ${({ primary }) => (primary ? "#E8EB00" : "#EAB6A5")};
-  font-size: 27px;
 `;
 
 export const DivContainer = styled.div`
@@ -30,4 +29,12 @@ export const TitleImgPContainer = styled.div`
 
 export const UserImg = styled.img`
   width: 130px;
+`;
+
+export const TitleCard = styled.h2`
+font-size: 40px;
+`;
+
+export const TextCard = styled.p`
+font-size: 27px;
 `;
