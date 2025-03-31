@@ -1,4 +1,4 @@
-import "./styles.css";
+import { ButtonComponent } from "./styles";
 import { ButtonProps } from "./types";
 
 
@@ -10,16 +10,16 @@ import { ButtonProps } from "./types";
 //     type?: 'submit' | 'button' | 'reset'
 // }
 
-function Button({ name, onClick, disabled = false, type = 'submit' }: ButtonProps) {
+function Button({ name, onClick, disabled = false, type = 'submit', danger }: ButtonProps) {
   return ( 
-  <button 
-    className="main-button" 
+  <ButtonComponent
     onClick={onClick} 
     disabled={disabled}
     type={type}
+    isDanger={danger}
     >
       {name}
-    </button>
+    </ButtonComponent>
   );
 }
 
