@@ -21,6 +21,7 @@ import Homework11 from "./homeworks/Homework11/Homework11";
 
 // Consultations imports
 // import Consultation04 from "./consultations/Consultation04/Consultation04"
+import Consultation05 from "./consultations/Consultation05/Consultation05";
 
 function App() {
 
@@ -40,7 +41,11 @@ function App() {
     {/* <Lesson10 /> */}
     {/* <Homework10 /> */}
     {/* <Lesson11 /> */}
+
     <Homework11 />
+      
+    <Consultation05 />
+
     </>
   )
 }

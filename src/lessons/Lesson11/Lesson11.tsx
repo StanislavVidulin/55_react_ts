@@ -45,11 +45,11 @@ useEffect(() => {
     console.log('input value changed');
 }, [exampleValue])
 
-// Example ДЗ
-// useEffect(() => {
-// изменять 3-й state, который хранит значение количества изменений
-// setState...
-// }, [exampleValue])
+  // Example ДЗ
+  // useEffect(() => {
+  // изменять 3-й state, который хранит значение количества изменений
+  // setState...
+  // }, [exampleValue])
 
   return (
     <Lesson11Container>
