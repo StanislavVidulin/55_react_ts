@@ -2,10 +2,10 @@ import styled from "@emotion/styled";
 
 export const Homework10Container = styled.div`
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  gap: 10px;
+  align-items: center;
+  gap: 40px;
   flex: 1;
-  background-color: rgb(234, 233, 154);
+  padding: 60px;
+  background-color: rgb(188, 219, 219);
 `;

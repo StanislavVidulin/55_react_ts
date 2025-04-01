@@ -4,8 +4,8 @@ import { Homework10Container } from "./styles";
 function Homework10 () {
     return (
         <Homework10Container>
-        <Button name="SEND"></Button>
-        <Button name="DELETE" danger></Button>
+        <Button name="SEND" />
+        <Button name="DELETE" danger />
         </Homework10Container>
     )
 }
