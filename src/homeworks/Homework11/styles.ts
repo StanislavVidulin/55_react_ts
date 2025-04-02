@@ -21,5 +21,6 @@ export const ResultContainer = styled.div`
   padding: 20px;
   background-color: rgb(5, 255, 201);
   border: 2px solid rgb(11, 11, 72);
-  font-size: 25px;
+  font-size: 30px;
+  font-weight: bold;
 `;

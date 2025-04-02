@@ -18,6 +18,7 @@ function Homework11() {
   };
 
   useEffect(() => {
+    // if(firstInputValue) { тело if } (с 0 начнётся)
     setShowCountChanges((prevValue) => prevValue + 1);
   }, [firstInputValue]);
 
@@ -25,15 +26,20 @@ function Homework11() {
     <MainContainer>
       <Input
         name="first_input"
+        placeholder="Enter your note"
         value={firstInputValue}
         onChange={changeFirstInputValue}
       />
+      <ResultContainer>
+      {/* {showCountChanges -1} */}
+        {showCountChanges === -1? 0 : showCountChanges}
+        </ResultContainer>
       <Input
         name="second_input"
+        placeholder="Enter your additional note"
         value={secondInputValue}
         onChange={changeSecondInputValue}
       />
-      <ResultContainer>{showCountChanges}</ResultContainer>
     </MainContainer>
   );
 }

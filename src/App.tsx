@@ -10,6 +10,7 @@ import GlobalStyles from "./styles/GlobalStyles";
 // import Lesson09 from "./lessons/Lesson09/Lesson09";
 // import Lesson10 from "./lessons/Lesson10/Lesson10";
 // import Lesson11 from "./lessons/Lesson11/Lesson11";
+import Lesson12 from "./lessons/Lesson12/Lesson12";
 
 // Homeworks imports
 // import Homework06 from "./homeworks/Homework06/Homework06";
@@ -17,11 +18,11 @@ import GlobalStyles from "./styles/GlobalStyles";
 // import Homework08 from "./homeworks/Homework08/Homework08";
 // import Homework09 from "./homeworks/Homework09/Homework09";
 // import Homework10 from "./homeworks/Homework10/Homework10";
-import Homework11 from "./homeworks/Homework11/Homework11";
+// import Homework11 from "./homeworks/Homework11/Homework11";
 
 // Consultations imports
 // import Consultation04 from "./consultations/Consultation04/Consultation04"
-import Consultation05 from "./consultations/Consultation05/Consultation05";
+// import Consultation05 from "./consultations/Consultation05/Consultation05";
 
 function App() {
 
@@ -41,11 +42,9 @@ function App() {
     {/* <Lesson10 /> */}
     {/* <Homework10 /> */}
     {/* <Lesson11 /> */}
-
-    <Homework11 />
-      
-    <Consultation05 />
-
+    {/* <Homework11 /> */}
+    {/* <Consultation05 /> */}
+    <Lesson12 />
     </>
   )
 }
