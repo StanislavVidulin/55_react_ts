@@ -19,8 +19,7 @@ function Homework12() {
     try {
       setIsLoading(true);
       const response = await axios.get(CAT_URL);
-      const data = response.data;
-      setCatFact(`${data.fact}`);
+      setCatFact(response.data.fact);
     } 
     
     catch (error: any) {
