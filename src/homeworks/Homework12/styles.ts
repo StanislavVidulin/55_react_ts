@@ -1,5 +1,7 @@
 import styled from "@emotion/styled";
 
+import backImage from '../../assets/background-image.jpg';
+
 export const Homework12Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -8,6 +10,9 @@ export const Homework12Container = styled.div`
   gap: 50px;
   flex: 1;
   background-color: rgb(218, 226, 230);
+  background-image: url(${backImage});
+  background-position: center;
+  background-size: cover;
 `;
 
 export const ResultContainer = styled.div`
