@@ -18,7 +18,14 @@ function Lesson13() {
   const [errorMessage, setErrorMessage] = useState<string | undefined>(undefined);
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [inputValue, setInputValue] = useState<string>("");
-  const [hideBtn, setHideBtn] = useState<boolean>(false);
+  // const [hideBtn, setHideBtn] = useState<boolean>(false);
+
+  const imagesList = image.map((image) => (
+    <ImgContainer>
+      <ImgComponent src={image} key={v4()} />
+    </ImgContainer>
+  ));
+  
 
   const changeInputValue = (event: ChangeEvent<HTMLInputElement>) => {
     setInputValue(event.target.value);
@@ -31,7 +38,7 @@ function Lesson13() {
 
   const deleteHandler = () => {
     setImage([]);
-    setHideBtn((prevValue) => !prevValue);
+    // setHideBtn((prevValue) => !prevValue);
   };
 
   const getImage = async () => {
@@ -41,12 +48,12 @@ function Lesson13() {
       setIsLoading(true);
       const response = await axios.get(DOG_IMAGES);
       setImage((prevImage) => [...prevImage, response.data.message]);
-      setHideBtn(true);
+      // setHideBtn(true);
       
     } catch (error: any) {
       setErrorMessage(error.message);
       setImage([]);
-      setHideBtn(false);
+      // setHideBtn(false);
 
     } finally {
       setIsLoading(false);
@@ -62,16 +69,12 @@ function Lesson13() {
       {isLoading ? (
         <Spinner />
       ) : (
-        image.map((image) => (
-          <ImgContainer>
-            <ImgComponent src={image} key={v4()} />
-          </ImgContainer>
-        ))
+        imagesList
       )}
       <ErrorComponent>{errorMessage}</ErrorComponent>
       <Input name="note" value={inputValue} onChange={changeInputValue} />
       <Button name="GET MORE IMAGES" onClick={getImage} disabled={isLoading} />
-      {hideBtn && <Button name="DELETE ALL DATA" onClick={deleteHandler} />}
+      {image.length > 0 && <Button name="DELETE ALL DATA" onClick={deleteHandler} />}
     </Lesson13Container>
   );
 }
