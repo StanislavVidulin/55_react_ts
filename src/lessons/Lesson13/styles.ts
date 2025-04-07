@@ -26,7 +26,15 @@ export const ImgContainer = styled.div`
   min-height: 600px;
   max-height: 700px;
   overflow-y: auto;
-  overflow-x: hidden;
+  /* hidden обрезает всё что вылезло */
+  /* overflow-x: hidden; */
+  /*
+  Для добавления scroll используем набор свойств постоянная высота (height) 
+  и свойство overflow: auto
+
+     height: 700px
+     overflow: auto
+  */
 `;
 
 export const ImgComponent = styled.img`
@@ -37,4 +45,15 @@ export const ImgComponent = styled.img`
 export const ErrorComponent = styled.div`
   color: red;
   font-size: 40px;
+`;
+
+export const ButtonContainer = styled.div`
+display: flex;
+flex-direction: column;
+gap: 20px;
+width: 400px;
+`;
+
+export const InputContainer = styled.div`
+width: 400px;
 `;
