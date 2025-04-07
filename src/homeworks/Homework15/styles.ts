@@ -22,18 +22,10 @@ export const Homework15Form = styled.form`
   font-weight: bold;
 `;
 
-export const CheckboxContainer = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 10px;
-`;
-
 export const CheckboxLabel = styled.label`
   font-size: 30px;
 `;
 
-export const ErrorMessage = styled.div`
-  height: 20px;
-  font-size: 18px;
-  color: red;
+export const CheckBoxWrapper = styled.div`
+display: flex;
 `;

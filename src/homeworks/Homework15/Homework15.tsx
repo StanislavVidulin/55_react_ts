@@ -3,15 +3,15 @@ import * as Yup from "yup";
 
 import Input from "../../components/Input/Input";
 import {
-  CheckboxContainer,
   CheckboxLabel,
-  ErrorMessage,
+  CheckBoxWrapper,
   Homework15Container,
   Homework15Form,
 } from "./styles";
 import Button from "../../components/Button/Button";
 import { Homework15FormValues } from "./types";
 import Checkbox from "../../components/Checkbox/Checkbox";
+import { ErrorMessage } from "../../components/Checkbox/styles";
 
 function Homework15() {
   const schema = Yup.object().shape({
@@ -39,12 +39,9 @@ function Homework15() {
     validateOnChange: false,
     onSubmit: (values: Homework15FormValues) => {
       console.table(values);
+      console.log("Вы успешно вошли");
     },
   });
-
-  const loginHandler = () => {
-    console.log("Вы успешно вошли");
-  };
 
   return (
     <Homework15Container>
@@ -57,7 +54,7 @@ function Homework15() {
           onChange={formik.handleChange}
           error={formik.errors.code}
         />
-        <CheckboxContainer>
+        <CheckBoxWrapper>
           <Checkbox
             name="agreement"
             type="checkbox"
@@ -66,9 +63,9 @@ function Homework15() {
             onChange={formik.handleChange}
           />
           <CheckboxLabel htmlFor="agree_id">Privacy and policy *</CheckboxLabel>
-        </CheckboxContainer>
+          </CheckBoxWrapper>
         <ErrorMessage>{formik.errors.agreement}</ErrorMessage>
-        <Button name="Login" onClick={loginHandler} />
+        <Button name="Login" />
       </Homework15Form>
     </Homework15Container>
   );

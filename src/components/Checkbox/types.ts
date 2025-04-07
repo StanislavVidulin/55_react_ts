@@ -5,5 +5,6 @@ export interface CheckboxProps {
     type?: 'checkbox', 
     id?: string,
     checked?: boolean,
-    onChange?: (event: ChangeEvent<HTMLInputElement>) => void
+    onChange?: (event: ChangeEvent<HTMLInputElement>) => void,
+    error?: string
 }

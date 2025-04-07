@@ -1,16 +1,19 @@
-import { CheckboxComponent } from "./styles";
+import { CheckboxComponent, CheckboxContainer, ErrorMessage } from "./styles";
 import { CheckboxProps } from "./types";
 
-function Checkbox({ name, type = 'checkbox', id, checked, onChange }: CheckboxProps) {
+function Checkbox({ name, id, checked, onChange, error }: CheckboxProps) {
   return (
+    <CheckboxContainer>
     <CheckboxComponent
       name={name}
-      type={type}
+      type='checkbox'
       id={id}
       checked={checked}
       onChange={onChange}
     >
     </CheckboxComponent>
+      <ErrorMessage>{error}</ErrorMessage>
+      </CheckboxContainer>
   );
 }
 
