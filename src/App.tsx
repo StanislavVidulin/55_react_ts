@@ -4,6 +4,7 @@ import Layout from "./components/Layout/Layout";
 import About from "./pages/About/About";
 import Home from "./pages/Home/Home";
 import GlobalStyles from "./styles/GlobalStyles";
+import Course from "./pages/Course/Course";
 
 // Lessons imports
 // импорт компонента Lesson06 по умолчанию
@@ -48,6 +49,7 @@ function App() {
           который должен быть вызван, если выполнить переход по этому маршруту */}
           <Route path='/' element={<Home />}/>
           <Route path='/about' element={<About />}/>
+          <Route path='/course' element={<Course />}/>
         </Routes>
       </Layout>
 
