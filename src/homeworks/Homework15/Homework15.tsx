@@ -3,18 +3,20 @@ import * as Yup from "yup";
 
 import Input from "../../components/Input/Input";
 import {
-  CheckboxLabel,
-  CheckBoxWrapper,
   Homework15Container,
   Homework15Form,
 } from "./styles";
 import Button from "../../components/Button/Button";
 import { Homework15FormValues } from "./types";
 import Checkbox from "../../components/Checkbox/Checkbox";
-import { ErrorMessage } from "../../components/Checkbox/styles";
+
 
 function Homework15() {
-  const schema = Yup.object().shape({
+  const validationSchema = Yup.object().shape({
+    // code: Yup.string()
+    // .required('Поле обязательное')
+    // .matches(/^\d{6}$/, 'Код должен содержать 6 символов'),
+
     code: Yup.number()
       .required("Field Validation code is required")
       .typeError("Field Age must be number")
@@ -24,7 +26,7 @@ function Homework15() {
         (value) => String(value).length === 6
       ),
 
-    agreement: Yup.boolean().oneOf(
+    privacy: Yup.boolean().oneOf(
       [true],
       "You must agree with privacy and policy"
     ),
@@ -33,13 +35,14 @@ function Homework15() {
   const formik = useFormik({
     initialValues: {
       code: "",
-      agreement: false,
+      privacy: false,
     } as Homework15FormValues,
-    validationSchema: schema,
+    validationSchema,
     validateOnChange: false,
-    onSubmit: (values: Homework15FormValues) => {
+    onSubmit: (values: Homework15FormValues, formikHelpers) => {
       console.table(values);
       console.log("Вы успешно вошли");
+      formikHelpers.resetForm()
     },
   });
 
@@ -50,21 +53,20 @@ function Homework15() {
           name="code"
           label="Validation code *"
           id="code_id"
+          placeholder="Enter your code"
+          type="number"
           value={formik.values.code}
           onChange={formik.handleChange}
           error={formik.errors.code}
         />
-        <CheckBoxWrapper>
           <Checkbox
-            name="agreement"
-            type="checkbox"
-            id="agree_id"
-            checked={formik.values.agreement}
+            name="privacy"
+            label="Privacy and Policy"
+            id="privacy_id"
+            checked={formik.values.privacy}
             onChange={formik.handleChange}
+            error={formik.errors.privacy}
           />
-          <CheckboxLabel htmlFor="agree_id">Privacy and policy *</CheckboxLabel>
-          </CheckBoxWrapper>
-        <ErrorMessage>{formik.errors.agreement}</ErrorMessage>
         <Button name="Login" />
       </Homework15Form>
     </Homework15Container>

@@ -1,3 +1,8 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import Layout from "./components/Layout/Layout";
+import About from "./pages/About/About";
+import Home from "./pages/Home/Home";
 import GlobalStyles from "./styles/GlobalStyles";
 
 // Lessons imports
@@ -14,7 +19,6 @@ import GlobalStyles from "./styles/GlobalStyles";
 // import Lesson13 from "./lessons/Lesson13/Lesson13";
 // import Lesson14 from "./lessons/Lesson14/Lesson14";
 
-
 // Homeworks imports
 // import Homework06 from "./homeworks/Homework06/Homework06";
 // import Homework07 from "./homeworks/Homework07/Homework07"
@@ -24,8 +28,7 @@ import GlobalStyles from "./styles/GlobalStyles";
 // import Homework11 from "./homeworks/Homework11/Homework11";
 // import Homework12 from "./homeworks/Homework12/Homework12";
 // import Homework14 from "./homeworks/Homework14/Homework14";
-import Homework15 from "./homeworks/Homework15/Homework15";
-
+// import Homework15 from "./homeworks/Homework15/Homework15";
 
 // Consultations imports
 // import Consultation04 from "./consultations/Consultation04/Consultation04"
@@ -33,34 +36,45 @@ import Homework15 from "./homeworks/Homework15/Homework15";
 // import Consultation06 from "./consultations/Consultation06/Consultation06";
 
 function App() {
-
   return (
-    <>
-    <GlobalStyles />
-    {/* <Task6 /> */}
-    {/* <Lesson06 /> */}
-    {/* <Homework06/> */}
-    {/* <Lesson07 /> */}
-    {/* <Homework07 /> */}
-    {/* <Lesson08/> */}
-    {/* <Consultation04/> */}
-    {/* <Homework08 /> */}
-    {/* <Lesson09 /> */}
-    {/* <Homework09 /> */}
-    {/* <Lesson10 /> */}
-    {/* <Homework10 /> */}
-    {/* <Lesson11 /> */}
-    {/* <Homework11 /> */}
-    {/* <Consultation05 /> */}
-    {/* <Lesson12 /> */}
-    {/* <Homework12/> */}
-    {/* <Lesson13 /> */}
-    {/* <Consultation06 /> */}
-    {/* <Lesson14 /> */}
-    {/* <Homework14 /> */}
-    <Homework15 />
-    </>
-  )
+    // BrowserRouter - глобальная обёртка для всего приложения,
+    // которая позволяет использовать маршрутизацию
+    <BrowserRouter>
+      <GlobalStyles />
+      <Layout>
+        {/* Routes - обёртка, которая собирает все маршруты приложения */}
+        <Routes>
+          {/* Route - компонент библиотеки, в который передаётся маршрут и тот компонент(страницу),
+          который должен быть вызван, если выполнить переход по этому маршруту */}
+          <Route path='/' element={<Home />}/>
+          <Route path='/about' element={<About />}/>
+        </Routes>
+      </Layout>
+
+      {/* <Task6 /> */}
+      {/* <Lesson06 /> */}
+      {/* <Homework06/> */}
+      {/* <Lesson07 /> */}
+      {/* <Homework07 /> */}
+      {/* <Lesson08/> */}
+      {/* <Consultation04/> */}
+      {/* <Homework08 /> */}
+      {/* <Lesson09 /> */}
+      {/* <Homework09 /> */}
+      {/* <Lesson10 /> */}
+      {/* <Homework10 /> */}
+      {/* <Lesson11 /> */}
+      {/* <Homework11 /> */}
+      {/* <Consultation05 /> */}
+      {/* <Lesson12 /> */}
+      {/* <Homework12/> */}
+      {/* <Lesson13 /> */}
+      {/* <Consultation06 /> */}
+      {/* <Lesson14 /> */}
+      {/* <Homework14 /> */}
+      {/* <Homework15 /> */}
+    </BrowserRouter>
+  );
 }
 
 export default App;

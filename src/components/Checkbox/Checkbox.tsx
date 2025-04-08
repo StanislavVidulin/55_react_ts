@@ -1,19 +1,30 @@
-import { CheckboxComponent, CheckboxContainer, ErrorMessage } from "./styles";
+import { CheckboxComponent, CheckboxContainer, CheckboxElement, CheckboxLabel, ErrorMessage } from "./styles";
 import { CheckboxProps } from "./types";
 
-function Checkbox({ name, id, checked, onChange, error }: CheckboxProps) {
+function Checkbox({ 
+  name, 
+  id, 
+  checked, 
+  onChange, 
+  label, 
+  error 
+}: CheckboxProps) {
   return (
-    <CheckboxContainer>
-    <CheckboxComponent
-      name={name}
-      type='checkbox'
-      id={id}
-      checked={checked}
-      onChange={onChange}
-    >
-    </CheckboxComponent>
-      <ErrorMessage>{error}</ErrorMessage>
+    <CheckboxComponent>
+      <CheckboxContainer>
+        <CheckboxElement
+          name={name}
+          type="checkbox"
+          id={id}
+          checked={checked}
+          onChange={onChange}
+        />
+        <CheckboxLabel htmlFor={id}>
+         {label}
+        </CheckboxLabel>
       </CheckboxContainer>
+      <ErrorMessage>{error}</ErrorMessage>
+    </CheckboxComponent>
   );
 }
 
