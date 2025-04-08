@@ -35,6 +35,7 @@ import Course from "./pages/Course/Course";
 // import Consultation04 from "./consultations/Consultation04/Consultation04"
 // import Consultation05 from "./consultations/Consultation05/Consultation05";
 // import Consultation06 from "./consultations/Consultation06/Consultation06";
+// import Consultation07 from "./consultations/Consultation07/Consultation07";
 
 function App() {
   return (
@@ -47,9 +48,9 @@ function App() {
         <Routes>
           {/* Route - компонент библиотеки, в который передаётся маршрут и тот компонент(страницу),
           который должен быть вызван, если выполнить переход по этому маршруту */}
-          <Route path='/' element={<Home />}/>
-          <Route path='/about' element={<About />}/>
-          <Route path='/course' element={<Course />}/>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/course" element={<Course />} />
         </Routes>
       </Layout>
 
@@ -75,6 +76,7 @@ function App() {
       {/* <Lesson14 /> */}
       {/* <Homework14 /> */}
       {/* <Homework15 /> */}
+      {/* <Consultation07 /> */}
     </BrowserRouter>
   );
 }

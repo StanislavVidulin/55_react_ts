@@ -15,16 +15,11 @@ function Consultation06() {
   console.log(userData);
 
   const getUser = async () => {
-
     try {
       const response = await axios.get(USER_URL);
       setUserData(response.data.results[0]);
-    } 
-
-    catch (error: any) {
-    } 
-    
-    finally {
+    } catch (error: any) {
+    } finally {
     }
   };
 
