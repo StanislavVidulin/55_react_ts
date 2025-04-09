@@ -12,19 +12,19 @@ export const CourseWrapper = styled.div`
 `;
 
 export const Title = styled.div`
-font-size: 50px;
-font-weight: bold;
-color: #5b03fd;
+  font-size: 50px;
+  font-weight: bold;
+  color: #5b03fd;
 `;
 
 export const LessonsWrapper = styled.div`
-display: flex;
-flex-direction: column;
-align-items: center;
-gap: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 `;
 
 export const LessonComponent = styled.div`
-font-size: 30px;
-font-weight: bold;
+  font-size: 30px;
+  font-weight: bold;
 `;

@@ -5,6 +5,10 @@ import About from "./pages/About/About";
 import Home from "./pages/Home/Home";
 import GlobalStyles from "./styles/GlobalStyles";
 import Course from "./pages/Course/Course";
+import Users from "./pages/Users/Users";
+import Designer from "./pages/Users/components/Designer/Designer";
+import Manager from "./pages/Users/components/Manager/Manager";
+import PageNotFound from "./pages/PageNotFound/PageNotFound";
 
 // Lessons imports
 // импорт компонента Lesson06 по умолчанию
@@ -51,6 +55,13 @@ function App() {
           <Route path='/' element={<Home />}/>
           <Route path='/about' element={<About />}/>
           <Route path='/course' element={<Course />}/>
+          <Route path='/users' element={<Users />}/>
+          <Route path='/users/designer' element={<Designer />}/>
+          <Route path='/users/manager' element={<Manager />}/>
+          {/* path='*' - специальный маршрут, который вызовет переданный компонент в
+          том случае, если в маршрутах выше не будет найдено того маршрута,
+          к которому обращается пользователь */}
+          <Route path='*' element={<PageNotFound />}/>
         </Routes>
       </Layout>
 
