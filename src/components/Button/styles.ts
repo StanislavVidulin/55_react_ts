@@ -5,7 +5,7 @@ interface ButtonComponentStyledProps {
 }
 
 export const ButtonComponent = styled.button<ButtonComponentStyledProps>`
-  width: 100%;
+  /* width: 100%; */
   height: fit-content;
   padding: 20px;
   background: ${({ danger }) =>
