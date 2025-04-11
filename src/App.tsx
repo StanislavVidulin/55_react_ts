@@ -14,6 +14,7 @@ import Amazon from "./pages/Clients/components/Amazon/Amazon";
 import Apple from "./pages/Clients/components/Apple/Apple";
 import Microsoft from "./pages/Clients/components/Microsoft/Microsoft";
 import Lesson18 from "./lessons/Lesson18/Lesson18";
+import Homework18 from "./homeworks/Homework18/Homework18";
 
 // Lessons imports
 // импорт компонента Lesson06 по умолчанию
@@ -68,6 +69,7 @@ function App() {
           <Route path='/clients/apple' element={<Apple />}/>
           <Route path='/clients/microsoft' element={<Microsoft />}/>
           <Route path='/lesson18' element={<Lesson18 />}/>
+          <Route path='/homework18' element={<Homework18 />}/>
           {/* path='*' - специальный маршрут, который вызовет переданный компонент в
           том случае, если в маршрутах выше не будет найдено того маршрута,
           к которому обращается пользователь */}
